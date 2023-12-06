@@ -1,0 +1,59 @@
+    {% extends "base.html" %}
+    {% block body %}
+
+
+    <header class="header">
+        <div class="header__wrapper">
+            <h1 class="header__title">
+                <strong>Hi, my name is <em>Nurbek</em></strong><br>
+                a frontend developer
+            </h1>
+            <div class="header__text">
+                <p>with passion for learning and creating.</p>
+            </div>
+            <a href="{{ url_for('static', filename='img/CV-Seidaliev Nurbek.pdf') }}" download="CV-Seidaliev Nurbek" class="btn">Download CV</a>
+        </div>
+    </header>
+
+    <main class="section" id="projects">
+        <div class="container">
+            <h2 class="title-1">Projects</h2>
+            <ul class="projects">
+                <li class="project">
+                    <a href="./project-page.html">
+                        <img src="{{ url_for('static', filename='img/projects/MC.png') }}" alt="Project img" class="project__img">
+                        <h3 class="project__title">Football club website</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="./project-page2.html">
+                        <img src="{{ url_for('static', filename='img/projects/Cara.png') }}" alt="Project img" class="project__img">
+                        <h3 class="project__title">Online clothing store</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="./project-page3.html">
+                        <img src="{{ url_for('static', filename='img/projects/StartBootstrap.png') }}" alt="Project img" class="project__img">
+                        <h3 class="project__title">Website on bootstrap</h3>
+                    </a>
+                </li>
+
+                <li class="project">
+                    <a href="./project-page4.html">
+                        <img src="{{ url_for('static', filename='img/projects/StudioBanx.png') }}"alt="Project img" class="project__img">
+                        <h3 class="project__title">Website of the web agency</h3>
+                    </a>
+                </li>
+                <li class="project">
+                    <img src="{{ url_for('static', filename='img/projects/PianoNew.png') }}" alt="Project img" class="project__img">
+                    <h3 class="project__title">Virtual piano</h3>
+                </li>
+                <li class="project">
+                    <img src="{{ url_for('static', filename='img/projects/ToDoListNew.png') }}" alt="Project img" class="project__img">
+                    <h3 class="project__title">Online To-Do List</h3>
+                </li>
+
+            </ul>
+        </div>
+    </main>
+    {% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body %}
+    <!-- <form action="{{ url_for('register') }}" method="POST">
+        <input type="text" name="login" placeholder="Login" required> 
+        <input type="text" name="user_fname" placeholder="Name" required>
+        <input type="text" name="user_sname" placeholder="Surname" required>
+        <input type="password" name="password1" placeholder="Сreate a password" required> 
+        <input type="password" name="password2" placeholder="Confirm password" required> 
+        <input type="submit" value="Register">
+
+    </form> -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs Section ======= -->
+        
+        <br><br>
+        <section class="inner-page">
+          <div class="container">
+            <p>
+             <h4> <b>My Profile</b></h4><br>
+      
+              {% if context%}
+              <table>
+                <tr>
+                    <td>Username:</td> <td>{{context.login}}</td>
+                </tr>
+               
+                <tr>
+                    <td>First Name:</td> <td>{{context.user_fname}}</td>
+                </tr>
+                
+                <tr>
+                    <td>Second Name:  </td> <td>{{context.user_sname}}</td>
+                </tr>
+                
+                <tr>
+                    <td>Portfolio availability:</td> 
+                    <td> <ol>
+                      {% if context.user_cars%}
+                        {% for car in context.user_cars%}  
+                      
+                          <li>Car Vendor: {{car.car_vendor}} | Car Model: {{car.car_model}} | Car Owner ID: {{car.car_owner}}</li>
+                      
+                        {% endfor %}
+                      {% else %}
+                      <i>This user has no uploaded portfolios </i> 
+                      {% endif %}
+                    </ol>
+                    </td>
+                </tr>
+            </table> 
+                
+                {% endif %}
+            </p>
+          </div>
+        </section>
+      
+      </main>
+
+     
+   
+{% endblock %}

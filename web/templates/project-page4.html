@@ -1,0 +1,27 @@
+    {% extends "base.html" %}
+    {% block body %}
+
+    <main class="section">
+        <div class="container">
+            <div class="project-details">
+
+                <h1 class="title-1">Website of the web agency</h1>
+
+                <img src="{{ url_for('static', filename='img/projects/StudioBanx.png') }}" alt="" class="project-details__cover">
+                <img src="{{ url_for('static', filename='img/projects/StudioBanx2.png') }}" alt="" class="project-details__cover">
+                <img src="{{ url_for('static', filename='img/projects/StudioBanx3.png') }}" alt="" class="project-details__cover">
+
+                <div class="project-details__desc">
+                    <p>Skills: React, HTML, CSS, JavaScript</p> 
+                </div>
+
+                <a href="https://github.com/RainPythonDeveloper" target="_blank" class="btn-outline">
+                    <img src="{{ url_for('static', filename='img/icons/gitHub-black.svg') }}" alt="">
+                    GitHub repo
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    {% endblock %}

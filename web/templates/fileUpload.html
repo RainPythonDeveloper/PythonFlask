@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <main class="section">
+        <section class="inner-page">
+            <div class="container">
+              <p>
+                {% if context %}
+                  <p style="color:red">{{context.Status}}<p>
+                {% endif %}
+      
+                Upload your file here:
+                <form action="{{ url_for('upload_file')}}" method="POST" enctype="multipart/form-data">
+      
+                  <input type="file" name="file_to_save">
+                  <input type="submit" value="Jukteu">
+                </form> 
+              </p>
+            </div>
+          </section>
+    </main>
+
+    {% endblock %}

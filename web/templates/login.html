@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block body %}
+    <!-- <form action="{{ url_for('register') }}" method="POST">
+        <input type="text" name="login" placeholder="Login" required> 
+        <input type="text" name="user_fname" placeholder="Name" required>
+        <input type="text" name="user_sname" placeholder="Surname" required>
+        <input type="password" name="password1" placeholder="Сreate a password" required> 
+        <input type="password" name="password2" placeholder="Confirm password" required> 
+        <input type="submit" value="Register">
+
+    </form> -->
+
+    <form action="{{ url_for('login')}}" method="POST" enctype="multipart/form-data">
+        <div class="container">
+            <br>
+          
+      
+          <label for="email"><b>Username</b></label>
+          <input type="text" placeholder="Enter Login" name="username" id="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+      
+          
+            
+          <button type="submit" class="registerbtn" value="Kettik">Log in</button> 
+          <div><br><br></div>
+          
+          
+        </div>
+      
+        
+      </form>
+
+     
+   
+{% endblock %}
